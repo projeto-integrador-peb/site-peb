@@ -1,132 +1,319 @@
+/* ============================================
+   CONTAINER PRINCIPAL DO FAQ
+   ============================================ */
 .faq-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-    gap: 20px; 
-    padding: 40px 0; /* Espaçamento da seção FAQ */
+    grid-template-columns: repeat(2, 1fr); /* Layout de 2 colunas */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 40px 0;
 }
 
+/* ============================================
+   ITENS INDIVIDUAIS DO FAQ
+   ============================================ */
 .faq-item {
-    display: flex; 
-    overflow: hidden; 
+    display: flex;
+    overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    height: 150px; /* Altura inicial */
-    transition: all 0.4s ease-in-out; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 150px; /* Altura padrão */
+    transition: all 0.4s ease-in-out;
     cursor: pointer;
-    flex-direction: row; /* Imagem à direita por padrão */
-    align-items: stretch; 
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
 }
 
+/* ============================================
+   VARIANTES DE CORES DOS ITENS
+   ============================================ */
+.faq-item.purple { 
+    background-color: #6a1b9a; 
+    color: white; 
+}
 
-/* Cores e texto inicial */
-.faq-item.purple { background-color: #6a1b9a; color: white; }
-.faq-item.orange { background-color: #ff8f00; color: white; }
+.faq-item.orange { 
+    background-color: #ff8f00; 
+    color: white; 
+}
 
+/* ============================================
+   TÍTULO DA SEÇÃO FAQ
+   ============================================ */
+h1 {
+    color: #ff8f00;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
 
+/* ============================================
+   CONTEÚDO TEXTUAL DOS ITENS
+   ============================================ */
 .content-box {
-    /* Mantenha estas propriedades */
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    /* ESSENCIAL: Centraliza o texto verticalmente dentro do content-box */
-    justify-content: center; 
+    justify-content: center;
     align-items: flex-start;
-    padding: 15px 20px;
+    padding: 20px;
     text-align: left;
-    
-    /* Garante que o texto da resposta não seja visível */
-    overflow: hidden; 
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima da imagem */
 }
 
+/* ============================================
+   ESTILOS DA PERGUNTA
+   ============================================ */
 .question {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: bold;
     margin: 0;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px; /* Melhora a legibilidade */
 }
 
+/* ============================================
+   ESTILOS DA RESPOSTA (ESTADO INICIAL)
+   ============================================ */
 .answer {
-    display: none; 
-    font-size: 1em;
-    margin-top: 10px;
+    max-height: 0;
     opacity: 0;
-    transition: opacity 0.3s 0.1s; 
+    overflow: hidden;
+    font-size: 1em;
+    margin-top: 0;
+    transition: all 0.4s ease-in-out;
+    line-height: 1.4;
+    width: 100%; /* Garante que ocupe toda a largura disponível */
 }
 
-/* Imagem e Alinhamento */
+/* ============================================
+   CONTAINER DA IMAGEM
+   ============================================ */
 .image-placeholder {
-    width: 150px; 
-    flex-shrink: 0; 
-    order: 1; 
-    /* Garante que a imagem preencha a altura definida pelo item pai */
-    height: 100%; 
+    width: 150px;
+    flex-shrink: 0;
+    order: 1; /* Posição inicial: direita */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
-    border-radius: 0 15px 15px 0; /* Borda arredondada à direita */
-    transition: border-radius 0.4s ease-in-out;
+    border-radius: 0 15px 15px 0;
+    transition: all 0.4s ease-in-out;
 }
 
-/* --- EFEITO HOVER --- */
+/* ============================================
+   ESTADOS INTERATIVOS - HOVER E ATIVO
+   ============================================ */
 
-.faq-item:hover {
-    height: auto; /* Permite que a altura se ajuste (Grid empurra o resto) */
-    min-height: 250px; 
-    flex-direction: row-reverse; /* Inverte a ordem: imagem vai para a esquerda */
-    background-color: #e0e0e0; 
-    color: #333; 
+/* Estado expandido (hover e ativo) */
+.faq-item:hover,
+.faq-item.active {
+    min-height: 200px;
+    flex-direction: row-reverse; /* Inverte a ordem dos elementos */
+    background-color: #e0e0e0;
+    color: #333;
+    transform: translateY(-5px); /* Efeito de levitação */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
 }
 
-.faq-item:hover .content-box {
+/* Conteúdo no estado expandido */
+.faq-item:hover .content-box,
+.faq-item.active .content-box {
     background-color: #e0e0e0;
     color: #333;
 }
 
-.faq-item:hover .question {
-    font-size: 1.1em; 
-    color: #6a1b9a; 
-    text-transform: none;
+/* Pergunta no estado expandido */
+.faq-item:hover .question,
+.faq-item.active .question {
+    font-size: 1.1em;
+    color: #6a1b9a;
+    text-transform: none; /* Remove uppercase no hover */
+    margin-bottom: 10px;
 }
 
-.faq-item:hover .answer {
-    display: block; 
-    opacity: 1; 
+/* Resposta no estado expandido */
+.faq-item:hover .answer,
+.faq-item.active .answer {
+    max-height: 200px; /* Altura aumentada para mais conteúdo */
+    opacity: 1;
+    margin-top: 10px;
 }
 
-.faq-item:hover .image-placeholder {
+/* Imagem no estado expandido */
+.faq-item:hover .image-placeholder,
+.faq-item.active .image-placeholder {
     order: -1; /* Move a imagem para a esquerda */
 }
 
-.faq-item:hover .image-placeholder img {
-    border-radius: 15px 0 0 15px; /* Arredonda a borda à esquerda */
+.faq-item:hover .image-placeholder img,
+.faq-item.active .image-placeholder img {
+    border-radius: 15px 0 0 15px;
+    transform: scale(1.05); /* Leve zoom na imagem */
 }
 
-/* ==================================== */
-/* 3. RESPONSIVIDADE (Mobile) */
-/* ==================================== */
+/* ============================================
+   ACESSIBILIDADE E ESTADOS DE FOCUS
+   ============================================ */
+.faq-item:focus {
+    outline: 3px solid #ff8f00;
+    outline-offset: 2px;
+}
+
+.faq-item:focus:not(:hover) {
+    background-color: rgba(106, 27, 154, 0.1); /* Feedback visual para foco */
+}
+
+/* Suporte para usuários que preferem reduzir movimento */
+@media (prefers-reduced-motion: reduce) {
+    .faq-item,
+    .content-box,
+    .question,
+    .answer,
+    .image-placeholder img {
+        transition: none;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - TABLETS E MOBILE
+   ============================================ */
+
+/* Tablets (até 768px) */
 @media (max-width: 768px) {
-    /* FAQ em coluna única no mobile */
     .faq-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Muda para 1 coluna */
+        gap: 15px;
+        padding: 30px 0;
     }
+    
     .faq-item {
-        flex-direction: column; /* Imagem no topo do texto */
+        flex-direction: column;
         height: auto;
-        min-height: unset;
+        min-height: 150px;
     }
-    .faq-item .image-placeholder {
+    
+    .image-placeholder {
         width: 100%;
-        height: 150px; 
-        order: 0; 
+        height: 120px;
+        order: 0; /* Imagem sempre no topo em mobile */
     }
-    .faq-item .image-placeholder img {
-        border-radius: 15px 15px 0 0; 
+    
+    .image-placeholder img {
+        border-radius: 15px 15px 0 0; /* Bordas superiores arredondadas */
     }
-    .faq-item:hover {
-        flex-direction: column; /* Mantém a ordem no hover mobile */
+    
+    /* Estados hover em mobile */
+    .faq-item:hover,
+    .faq-item.active {
+        flex-direction: column; /* Mantém layout vertical */
+        min-height: 250px;
+        transform: none; /* Remove levitação em mobile */
+    }
+    
+    .faq-item:hover .image-placeholder img,
+    .faq-item.active .image-placeholder img {
+        border-radius: 15px 15px 0 0;
+        transform: none; /* Remove zoom em mobile */
+    }
+    
+    .content-box {
+        padding: 15px;
+    }
+    
+    .question {
+        font-size: 1.1em;
+    }
+    
+    h1 {
+        font-size: 2em; /* Título menor em tablets */
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
+    .faq-container {
+        gap: 12px;
+        padding: 20px 0;
+    }
+    
+    .faq-item {
+        min-height: 130px;
+    }
+    
+    .faq-item:hover,
+    .faq-item.active {
+        min-height: 200px;
+    }
+    
+    .image-placeholder {
+        height: 100px;
+    }
+    
+    .content-box {
+        padding: 12px;
+    }
+    
+    .question {
+        font-size: 1em;
+    }
+    
+    .answer {
+        font-size: 0.9em;
+    }
+    
+    h1 {
+        font-size: 1.8em; /* Título ainda menor em mobile */
+        margin-bottom: 20px;
+    }
+}
+
+/* ============================================
+   CONTAINER GERAL (SE NECESSÁRIO)
+   ============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   MELHORIAS ADICIONAIS DE ACESSIBILIDADE
+   ============================================ */
+
+/* Indicador visual para itens interativos */
+.faq-item::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E");
+    background-size: contain;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.faq-item:hover::after,
+.faq-item.active::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236a1b9a'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E");
+    transform: rotate(180deg);
+}
+
+/* Esconde o indicador em mobile para não sobrecarregar */
+@media (max-width: 768px) {
+    .faq-item::after {
+        display: none;
     }
 }

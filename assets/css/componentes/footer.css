@@ -1,43 +1,173 @@
 footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr; /* Layout de 3 colunas iguais */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 30px; /* Espaçamento entre as colunas */
 
     background-color: #000;
     color: #fff;
     padding: 40px 60px;
-    margin-top: 50px;
+    
+    /* Garante que o footer ocupe toda a largura */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Logo */
+/* ============================================
+   SEÇÃO DA LOGO (COLUNA ESQUERDA)
+   ============================================ */
+
 .logo-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza a logo horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .footer-logo {
-    max-height: 180px; /* tamanho moderado */
-    width: auto;
+    max-height: 180px; /* Altura máxima controlada */
+    width: auto; /* Mantém proporção original */
+    transition: transform 0.3s ease; /* Transição suave para hover */
 }
 
-/* Centro */
+/* Efeito sutil na logo ao passar o mouse */
+.footer-logo:hover {
+    transform: scale(1.05); /* Leve aumento ao hover */
+}
+
+/* ============================================
+   SEÇÃO CENTRAL (INFORMAÇÕES E COPYRIGHT)
+   ============================================ */
+
 .footer-center {
     text-align: center;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.6; /* Melhora a legibilidade do texto */
 }
 
-/* Mapa à direita */
+.footer-center p {
+    margin: 8px 0; /* Espaçamento consistente entre parágrafos */
+}
+
+.footer-center p:first-child {
+    font-weight: 600; /* Destaque para o copyright */
+}
+
+.footer-center p:last-child {
+    color: #ccc; /* Cor mais suave para o crédito */
+    font-style: italic; /* Destaque sutil */
+}
+
+/* ============================================
+   SEÇÃO DO MAPA DO SITE (COLUNA DIREITA)
+   ============================================ */
+
 .footer-right {
-    text-align: right;
+    text-align: right; /* Alinha conteúdo à direita */
 }
 
 .footer-right h3 {
-    color: #ff8f00;
-    margin-bottom: 10px;
+    color: #ff8f00; /* Cor laranja para destaque */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    font-size: 1.2rem;
+    font-weight: 700;
 }
+
 .footer-right ul {
-    list-style: none;   /* tira os bullets */
+    list-style: none; /* Remove marcadores padrão */
     padding: 0;
     margin: 0;
+}
+
+.footer-right li {
+    margin-bottom: 8px; /* Espaçamento entre itens da lista */
+}
+
+.footer-right a {
+    color: #fff; /* Cor branca para links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: all 0.3s ease; /* Transição suave para hover */
+    font-size: 14px;
+}
+
+.footer-right a:hover {
+    color: #ff8f00; /* Cor laranja ao passar o mouse */
+    padding-left: 5px; /* Leve deslocamento para efeito visual */
+}
+
+/* ============================================
+   RESPONSIVIDADE - AJUSTES PARA DISPOSITIVOS MÓVEIS
+   ============================================ */
+
+@media (max-width: 1024px) {
+    footer {
+        padding: 30px 40px; /* Reduz padding em tablets */
+        gap: 20px; /* Reduz espaçamento entre colunas */
+    }
+    
+    .footer-logo {
+        max-height: 140px; /* Logo menor em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr; /* Muda para layout de 1 coluna */
+        grid-template-rows: auto auto auto; /* 3 linhas automáticas */
+        gap: 25px;
+        padding: 30px 20px;
+        text-align: center; /* Centraliza todo o conteúdo */
+    }
+    
+    .footer-logo {
+        max-height: 120px; /* Logo ainda menor em mobile */
+    }
+    
+    .footer-right {
+        text-align: center; /* Centraliza mapa do site em mobile */
+    }
+    
+    .footer-right h3 {
+        margin-bottom: 12px;
+    }
+    
+    .footer-right a:hover {
+        padding-left: 0; /* Remove efeito de deslocamento em mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 25px 15px;
+        gap: 20px;
+    }
+    
+    .footer-logo {
+        max-height: 100px; /* Logo compacta para telas muito pequenas */
+    }
+    
+    .footer-center {
+        font-size: 14px; /* Texto um pouco menor */
+    }
+    
+    .footer-right a {
+        font-size: 13px; /* Links menores */
+    }
+}
+
+/* ============================================
+   MELHORIAS DE ACESSIBILIDADE
+   ============================================ */
+
+/* Melhora o foco para navegação por teclado */
+.footer-right a:focus {
+    outline: 2px solid #ff8f00;
+    outline-offset: 2px;
+}
+
+/* Garante contraste adequado para leitores de tela */
+@media (prefers-reduced-motion: reduce) {
+    .footer-logo,
+    .footer-right a {
+        transition: none; /* Remove animações para usuários que preferem redução de movimento */
+    }
 }

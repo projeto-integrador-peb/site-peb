@@ -1,26 +1,143 @@
-/* ======================= CONTATO ======================= */
 #contato {
     padding: 60px 20px;
-    background: #ffffff;
-    align-items: flex-start;
+    background: #5F2EE6;
+    text-align: center; /* Centraliza todo o conteúdo da seção */
 }
 
-#contato h2 {
-    color: #F28C28; /* laranja */
-    margin-bottom: 20px;
-    font-size: 2rem;
+/* Container principal com largura máxima controlada */
+#contato .container {
+    max-width: 700px; /* Largura ideal para melhor legibilidade */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
-#contato p {
-    margin-bottom: 10px;
-    font-size: 1rem;
+/* Título da seção com destaque */
+.contact-header h2 {
+    color: #F28C28; /* Cor laranja para contraste com o fundo roxo */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700; /* Adiciona peso para melhor hierarquia visual */
 }
 
-.instagram-embed {
-    width: 320px;
-    align-items: flex-end;
+/* Container das informações de contato */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento consistente entre os itens */
+    align-items: center; /* Centraliza todos os itens horizontalmente */
 }
 
+/* Cartões de informações de contato */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre ícone e texto */
+    padding: 15px 20px;
+    background: #f8f9fa; /* Fundo claro para contraste */
+    border-radius: 10px;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 500px; /* Largura máxima para manter proporção */
+    justify-content: flex-start; /* Alinha conteúdo à esquerda dentro do card */
+    transition: all 0.3s ease; /* Transição suave para hover */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+}
 
+/* Efeito hover para interatividade */
+.contact-item:hover {
+    background: #e9ecef; /* Cor de fundo mais escura no hover */
+    transform: translateY(-3px); /* Efeito de levitação */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
 
+/* Estilização dos ícones */
+.icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Impede que o ícone seja comprimido */
+}
 
+/* Ícone do Instagram com gradiente característico */
+.instagram-icon {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+
+/* Estilização do texto */
+.contact-item p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333; /* Cor escura para boa legibilidade */
+    text-align: left; /* Alinhamento à esquerda para melhor leitura */
+}
+
+/* Destaque para labels (Telefone, Email, etc.) */
+.contact-item strong {
+    color: #F28C28; /* Cor laranja para consistência com o título */
+    margin-right: 5px;
+}
+
+/* Links de contato */
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+.contact-item a:hover {
+    color: #5F2EE6; /* Cor do fundo da seção para consistência */
+}
+
+/* ============================================
+   RESPONSIVIDADE - AJUSTES PARA DISPOSITIVOS MÓVEIS
+   ============================================ */
+
+@media (max-width: 768px) {
+    #contato {
+        padding: 40px 15px; /* Reduz padding em telas menores */
+    }
+    
+    .contact-header h2 {
+        font-size: 2rem; /* Título menor em mobile */
+        margin-bottom: 30px;
+    }
+    
+    .contact-item {
+        padding: 12px 15px; /* Padding reduzido */
+        max-width: 100%; /* Ocupa toda a largura disponível */
+    }
+    
+    .contact-item p {
+        font-size: 1rem; /* Texto levemente menor */
+    }
+    
+    .icon {
+        width: 35px; /* Ícones um pouco menores */
+        height: 35px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h2 {
+        font-size: 1.75rem; /* Título ainda menor em telas muito pequenas */
+    }
+    
+    .contact-item {
+        flex-direction: column; /* Empilha ícone e texto verticalmente */
+        gap: 10px;
+        text-align: center; /* Centraliza texto quando empilhado */
+    }
+    
+    .contact-item p {
+        text-align: center; /* Centraliza texto em layout empilhado */
+    }
+}
