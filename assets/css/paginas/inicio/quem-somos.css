@@ -1,0 +1,21 @@
+.quem-somos {
+    padding: 3rem 0;
+}
+
+.quem-somos .titulo {
+    font-size: 2rem;
+    color: var(--color-primary-500);
+}
+
+.quem-somos .perfil {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.quem-somos .subtitulo {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    font-weight: 400;
+}
