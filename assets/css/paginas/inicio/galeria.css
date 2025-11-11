@@ -3,9 +3,10 @@
 }
 
 /* Position the image container (needed to position the left and right arrows) */
-.container {
+#galeria .container{
   position: relative;
 }
+
 
 /* Hide the images by default */
 .mySlides {
