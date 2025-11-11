@@ -1,64 +1,59 @@
-/* ======================= FOOTER ======================= */
+/* Garante que o footer resolva problemas de flutuação */
 footer {
-    background: #000;
-    color: #fff;
-    padding: 40px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: space-between;
+    /* Layout de 3 Colunas: Logo (1fr), Texto (2fr), Mapa (1fr) */
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
     
-}
+    /* ESSENCIAL: Limpa qualquer flutuação de elementos anteriores */
+    clear: both; 
 
-.footer-center,
-.footer-right {
-    flex: 1;
-    min-width: 250px;
+    /* Configurações visuais */
+    background-color: #000; 
+    color: #fff; 
+    padding: 30px 50px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: 50px; /* Espaço entre o conteúdo e o footer */
 }
-
 
 .logo-wrapper {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .footer-logo {
-    width: 300px;
-    margin-bottom: 15px;
-    justify-content: center;
-    display: flex;
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
 }
 
-footer p {
-    margin: 5px 0;
+.footer-center {
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o bloco */
+}
+
+.footer-right {
+    text-align: right; /* Alinha o mapa à direita */
 }
 
 .footer-right h3 {
-    margin-bottom: 15px;
-    color: #F28C28; /* laranja */
+    margin-top: 0;
+    color: #ff8f00; 
 }
 
 .footer-right ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.footer-right ul li {
-    margin-bottom: 8px;
-}
-
-.footer-right ul li a {
+.footer-right a {
     color: #fff;
     text-decoration: none;
+    line-height: 1.5;
 }
 
-.footer-right ul li a:hover {
-    text-decoration: underline;
-}
 
-/* Responsividade */
-@media (max-width: 768px) {
-    footer {
-        text-align: center;
-    }
-}
