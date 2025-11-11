@@ -1,53 +1,114 @@
-/* ======================= FAQ ======================= */
-#faq {
-    background: #F28C28; /* laranja */
-    padding: 60px 20px;
-    text-align: center;
-    color: #010101;
-}
-
-#faq h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
-.faq-item {
-    max-width: 700px;
-    margin: 0 auto 15px;
-    text-align: left;
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.faq-question {
-    width: 100%;
-    background: #fff;
-    border: none;
-    padding: 18px 20px;
-    font-size: 1rem;
-    cursor: pointer;
+/* Definições globais */
+body {
+    background-color: #f0f0f0; /* Cor de fundo suave */
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.faq-question .arrow {
-    font-size: 1.2rem;
+.faq-container {
+    display: grid;
+    /* Define 2 colunas de largura igual com um pequeno espaço (gap) */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Espaço entre as caixas */
+    max-width: 1200px;
+    padding: 20px;
 }
 
-.faq-answer {
-    padding: 0 20px 20px;
-    display: none;
-    color: #333;
+/* Estilo para cada item do FAQ */
+.faq-item {
+    display: flex;
+    overflow: hidden; /* Garante que a borda arredondada seja aplicada à imagem */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s;
+    height: 150px; /* Altura fixa para as caixas de título */
 }
 
-/* Expansão simples opcional */
-.faq-item.open .faq-answer {
+/* Estilo para o estado de resposta (toggle) */
+.faq-item.toggled {
+    height: auto; /* Permite que a altura se ajuste ao conteúdo da resposta */
+    min-height: 250px; /* Garante uma altura mínima para a resposta ser visível */
+    flex-direction: row-reverse; /* Inverte a ordem para a resposta ter mais destaque */
+}
+
+/* Cores das caixas */
+.faq-item.purple {
+    background-color: #6a1b9a; /* Roxo escuro */
+    color: white;
+}
+
+.faq-item.orange {
+    background-color: #ff8f00; /* Laranja vibrante */
+    color: white;
+}
+
+/* Conteúdo da Pergunta/Resposta */
+.content-box {
+    flex-grow: 1;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.question {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    /* Alinha o texto da pergunta à esquerda/topo */
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Estilo da Resposta (oculta por padrão na estrutura de título) */
+.answer {
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 10px;
+    display: none; /* Oculta a resposta na visualização inicial (título) */
+    text-align: left;
+}
+
+/* Estilo da Resposta quando a caixa é "clicada" (toggled) */
+.faq-item.toggled .content-box {
+    background-color: #e0e0e0; /* Fundo cinza para a resposta */
+    color: #333; /* Texto escuro para a resposta */
+}
+
+.faq-item.toggled .question {
+    font-size: 1.1em; /* Diminui o título */
+    color: #6a1b9a; /* Cor do título na visualização da resposta */
+    margin-bottom: 5px;
+    text-transform: none;
+}
+
+.faq-item.toggled .answer {
+    display: block; /* Mostra a resposta */
+}
+
+
+/* Imagem (placeholder) */
+.image-placeholder {
+    /* Largura fixa da coluna da imagem */
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
     display: block;
 }
 
-.faq-item.open .arrow {
-    transform: rotate(180deg);
+/* Responsividade: para telas menores, muda para uma única coluna */
+@media (max-width: 768px) {
+    .faq-container {
+        grid-template-columns: 1fr; /* Uma única coluna */
+    }
 }
-

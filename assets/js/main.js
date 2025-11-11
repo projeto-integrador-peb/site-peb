@@ -1,13 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.faq-item');
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
 
-  items.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
+    faqItems.forEach(item => {
+        // Adiciona um evento de clique a cada caixa
+        item.addEventListener('click', function() {
+            // Alterna a classe 'toggled' para mostrar ou esconder a resposta
+            this.classList.toggle('toggled');
 
-    question.addEventListener('click', () => {
-      const isOpen = answer.style.display === 'block';
-      answer.style.display = isOpen ? 'none' : 'block';
+            // Percorre todos os itens
+            faqItems.forEach(otherItem => {
+                // Se for outro item E estiver ativo, desativa (fecha)
+                if (otherItem !== this && otherItem.classList.contains('toggled')) {
+                    otherItem.classList.remove('toggled');
+                }
+            });
+        });
     });
-  });
 });
