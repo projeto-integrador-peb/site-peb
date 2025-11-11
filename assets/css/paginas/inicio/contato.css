@@ -1,0 +1,26 @@
+/* ======================= CONTATO ======================= */
+#contato {
+    padding: 60px 20px;
+    background: #ffffff;
+    align-items: flex-start;
+}
+
+#contato h2 {
+    color: #F28C28; /* laranja */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#contato p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.instagram-embed {
+    width: 320px;
+    align-items: flex-end;
+}
+
+
+
+
