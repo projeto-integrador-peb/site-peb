@@ -19,3 +19,7 @@
     color: var(--color-secondary);
     font-weight: 400;
 }
+
+.quem-somos .missao-visao-valores {
+    padding-top: 3rem;
+}
