@@ -1,59 +1,43 @@
-/* Garante que o footer resolva problemas de flutuação */
 footer {
-    /* Layout de 3 Colunas: Logo (1fr), Texto (2fr), Mapa (1fr) */
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; 
-    
-    /* ESSENCIAL: Limpa qualquer flutuação de elementos anteriores */
-    clear: both; 
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
 
-    /* Configurações visuais */
-    background-color: #000; 
-    color: #fff; 
-    padding: 30px 50px; 
-    width: 100%; 
-    box-sizing: border-box; 
-    margin-top: 50px; /* Espaço entre o conteúdo e o footer */
+    background-color: #000;
+    color: #fff;
+    padding: 40px 60px;
+    margin-top: 50px;
 }
 
+/* Logo */
 .logo-wrapper {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
 }
 
 .footer-logo {
-    max-width: 100%;
-    height: auto;
-    max-height: 100px;
+    max-height: 180px; /* tamanho moderado */
+    width: auto;
 }
 
+/* Centro */
 .footer-center {
-    text-align: center; /* Centraliza o texto */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente o bloco */
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
+/* Mapa à direita */
 .footer-right {
-    text-align: right; /* Alinha o mapa à direita */
+    text-align: right;
 }
 
 .footer-right h3 {
-    margin-top: 0;
-    color: #ff8f00; 
+    color: #ff8f00;
+    margin-bottom: 10px;
 }
-
 .footer-right ul {
-    list-style: none;
+    list-style: none;   /* tira os bullets */
     padding: 0;
     margin: 0;
 }
-
-.footer-right a {
-    color: #fff;
-    text-decoration: none;
-    line-height: 1.5;
-}
-
-
