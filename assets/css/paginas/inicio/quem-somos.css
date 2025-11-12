@@ -47,6 +47,7 @@
 }
 
 .quem-somos .missao-visao-valores {
+    padding-left: 1rem;
 }
 
 .quem-somos .missao-visao-valores p {
@@ -57,4 +58,10 @@
     font-size: 1.5rem;
     color: var(--color-secondary);
     font-weight: 400;
+}
+
+@media (max-width: 992px) {
+    .quem-somos .missao-visao-valores {
+        padding-left: 0;
+    }
 }
