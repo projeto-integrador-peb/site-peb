@@ -1,0 +1,11 @@
+.caixas-depoimentos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.caixas-depoimentos .card{
+  margin-bottom: 20px;
+  width: 47%;
+}

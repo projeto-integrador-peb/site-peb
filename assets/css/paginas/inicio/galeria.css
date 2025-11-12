@@ -85,3 +85,7 @@
 .demo:hover {
   opacity: 1;
 }
+
+.galeria-slide img{
+  padding: 12px;
+}
