@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEB - Programa Educar Brincando</title>
-
+    <link rel="icon" type="image/svg" href="./assets/imagens/logo-peb.svg" alt="Logo PEB" class="logo">"
     <link rel="stylesheet" href="assets/css/vendor/slick.css">
     <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -24,38 +24,29 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-md-4 logo">
-                    <img src="assets/imagens/logo-peb.svg" width="156px" alt="Logo do Programa Educar Brincando">
+    <header class="fixed-menu"; id="#top">
+        <div class="header-glass-overlay"></div>
+            <div class="header-menu-bar">
+                <div class="logo">
+               <img src="./assets/imagens/logo-peb.svg" alt="Logo PEB" class="logo">
                 </div>
-                <nav class="col-6 col-md-8">
-                    <p>Vamos fazer um site bonito pessoal</p>
+    
+                <nav id="main-nav">
                     <ul>
-                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#quem-somos">Quem Somos</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
                         <li><a href="#contato">Contato</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </nav>
             </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="hero">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-12 col-md-4">
-                        <img src="https://placehold.co/600x400" alt="Imagem ilustrativa sobre quem somos">
-                    </div>
-
-                    <div class="col-12 col-md-8">
-                        <h1>Programa Educar Brincando</h1>
-                    </div>
+    
+            <div class="header-hero-content">
+                <h1>Programa Educar Brincando</h1>
                 </div>
-            </div>
-        </section>
-
+    </header>
         <section id="quem-somos" class="quem-somos">
             <div class="container">
                 <div class="row justify-content-center align-items-start">
@@ -358,7 +349,13 @@
         </section>
 
         </main>
-
+        <a href="https://wa.me/5511914520531?text=Mensagem+aqui" target="_blank" class="whatsapp-fixed-btn">
+            Venha Se Divertir!
+        </a>
+        <!-- Botão de rolagem para o topo -->
+        <a href="#top" class="scroll-to-top-btn">
+            <img src="./assets/imagens/ate_topo.png" alt="Voltar ao Topo" />
+        </a>
 <!-- Rodapé do site -->
 <footer>
     <!-- Logo da empresa -->

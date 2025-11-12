@@ -1,0 +1,158 @@
+/* -------------------------------------- */
+/* ESTILIZAÇÃO GERAL E HEADER HERO */
+/* -------------------------------------- */
+header {
+    /* Define o tamanho da tela e aplica a imagem de fundo */
+    margin-top: 166px;
+    height: 80vh; /* Altura de 100% da viewport */
+    background: url('../../imagens/peb_principal.webp') no-repeat center center/cover;
+    position: relative; /* Importante para posicionar o menu e o título */
+    /* Cria o contexto de Grid para sobrepor elementos */
+    display: grid;
+    
+    /* Faz o menu-bar e o hero-content ocuparem a mesma célula (sobreposição) */
+    grid-template-areas: "content"; 
+    .header-glass-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3); /* Fundo branco semi-transparente */
+        backdrop-filter: blur(3px); /* Efeito de desfoque */
+        z-index: 1; /* Fica abaixo do conteúdo */
+    }
+}
+
+/* Os dois elementos filhos ocupam a mesma área (content) */
+.header-menu-bar, .header-hero-content {
+    grid-area: content;
+    z-index: 2; /* Para garantir que o conteúdo fique sobre o fundo */
+}
+
+/* Centraliza e estiliza o Título sobre a Imagem */
+.header-hero-content {
+    /* Flexbox para centralizar o título vertical e horizontalmente */
+    font: fredoka one;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #E68429; /* Cor do texto sobre a imagem */
+    /* Adiciona uma sombra para melhorar a legibilidade sobre a imagem */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
+}
+
+.header-hero-content h1 {
+    font-size: 4em;
+}
+/* -------------------------------------- */
+/* MENU FIXO E BARRA DE NAVEGAÇÃO */
+/* -------------------------------------- */
+.header-menu-bar {
+    /* Alinhamento usando Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5%;
+    font: fredoka one;
+    font-size: 25px;
+    
+    /* PROPRIEDADE CHAVE: Torna o menu fixo no topo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: rgba(255, 255, 255, 0.80); /* Fundo semi-transparente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Garante que fique acima de tudo */
+}
+header img {
+    width: 180px; height: 180px; 
+   /* Ajuste conforme necessário */
+}
+/* Estilização do menu grande */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header main {
+    /* Adiciona um padding no topo para que o conteúdo não fique escondido
+       atrás do menu fixo, ajuste este valor conforme a altura do seu menu. */
+    padding-top: 200px; 
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #5F2EE6;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: center;
+}
+
+header nav ul li a:hover {
+    color: #E68429;
+}
+
+/* Compensação para o Header Fixo */
+main {
+    /* Adiciona um padding no topo para que o conteúdo não fique escondido
+       atrás do menu fixo, ajuste este valor conforme a altura do seu menu. */
+    padding-top: 200px; 
+}
+/* -------------------------------------- */
+/* BOTÃO WHATSAPP FIXO */
+/* -------------------------------------- */
+.whatsapp-fixed-btn {
+    /* PROPRIEDADE CHAVE: Torna o botão fixo */
+    position: fixed;
+    bottom: 150px; /* Distância da borda inferior */
+    right: 10px; /* Distância da borda direita */
+    
+    background-color: var(--cor-secundaria); /* Geralmente Verde */
+    color: #5F2EE6;
+    padding: 20px 10px;
+    border-radius: 50px; /* Formato redondo/oval */
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Fica abaixo do menu fixo, mas acima do conteúdo */
+    transition: transform 0.3s;
+    background-color: #29E63A;
+}
+
+.whatsapp-fixed-btn:hover {
+    transform: scale(1.05);/* Pequena animação ao passar o mouse */
+    color: #ffffff;
+    background-color: #E68429;
+}
+.scroll-to-top-btn {
+    position: fixed;
+    width: 130px;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1001;
+
+    background-color: #5F2EE6;
+    color: #a31a1a;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.scroll-to-top-btn img {
+    width: 60%;
+    height: auto;
+    filter: invert(100%)
+}
+.scroll-to-top-btn:hover {
+    background-color: #e69a29;
+    transform: scale(1.1);
+}
