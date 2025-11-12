@@ -62,7 +62,8 @@ footer {
    ============================================ */
 
 .footer-right {
-    text-align: right; /* Alinha conteúdo à direita */
+    text-align: left; /* Alinha conteúdo à direita */
+    padding-left: 20px;
 }
 
 .footer-right h3 {
