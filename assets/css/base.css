@@ -4133,20 +4133,23 @@ p {
   cursor: pointer;
   transition: background-color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
   border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
 }
 
 .btn:active {
-  transform: translateY(1px);
 }
 
 .btn-primary {
-  background: linear-gradient(180deg, var(--color-primary-500), var(--color-primary-600));
+  background: var(--color-primary-500);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(33, 150, 243, 0.12);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(180deg, var(--color-primary-400), var(--color-primary-600));
+  background: var(--color-primary-400);
 }
 
 .btn-outline {
