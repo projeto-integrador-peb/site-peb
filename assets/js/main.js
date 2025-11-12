@@ -1,7 +1,7 @@
 // Adiciona interação por clique para mobile
-document.addEventListener('DOMContentLoaded', function() {
+$(function () {
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
         item.addEventListener('click', function() {
             // Remove a classe active de todos os itens
@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     otherItem.classList.remove('active');
                 }
             });
-            
+
             // Alterna a classe active no item clicado
             this.classList.toggle('active');
         });
     });
-    
+
     // Fecha itens ao clicar fora
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.faq-item')) {
@@ -24,4 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    $('.galeria-slide').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
 });
