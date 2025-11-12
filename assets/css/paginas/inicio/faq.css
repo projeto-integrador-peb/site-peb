@@ -40,7 +40,7 @@
 /* ============================================
    TÍTULO DA SEÇÃO FAQ
    ============================================ */
-h1 {
+#faq h1 {
     color: #ff8f00;
     text-align: center;
     font-size: 2.5em;
@@ -236,7 +236,7 @@ h1 {
         font-size: 1.1em;
     }
     
-    h1 {
+    #faq h1 {
         font-size: 2em; /* Título menor em tablets */
     }
 }
@@ -273,7 +273,7 @@ h1 {
         font-size: 0.9em;
     }
     
-    h1 {
+    #faq h1 {
         font-size: 1.8em; /* Título ainda menor em mobile */
         margin-bottom: 20px;
     }
