@@ -2,48 +2,80 @@
 /* ESTILIZAÇÃO GERAL E HEADER HERO */
 /* -------------------------------------- */
 header {
-    /* Define o tamanho da tela e aplica a imagem de fundo */
-    margin-top: 166px;
-    height: 80vh; /* Altura de 100% da viewport */
-    background: url('../../imagens/peb_principal.webp') no-repeat center center/cover;
     position: relative; /* Importante para posicionar o menu e o título */
     /* Cria o contexto de Grid para sobrepor elementos */
     display: grid;
-    
+
     /* Faz o menu-bar e o hero-content ocuparem a mesma célula (sobreposição) */
-    grid-template-areas: "content"; 
-    .header-glass-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.3); /* Fundo branco semi-transparente */
-        backdrop-filter: blur(3px); /* Efeito de desfoque */
-        z-index: 1; /* Fica abaixo do conteúdo */
-    }
+    grid-template-areas: "content";
+
 }
 
-/* Os dois elementos filhos ocupam a mesma área (content) */
-.header-menu-bar, .header-hero-content {
-    grid-area: content;
-    z-index: 2; /* Para garantir que o conteúdo fique sobre o fundo */
+.header-menu-bar .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
 }
+
+.header-menu-bar .hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-menu-bar .hamburger.ativo span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.header-menu-bar .hamburger.ativo span:nth-child(2) {
+    opacity: 0;
+}
+.header-menu-bar .hamburger.ativo span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
 
 /* Centraliza e estiliza o Título sobre a Imagem */
 .header-hero-content {
+    position: relative;
+    grid-area: content;
+    z-index: 2; /* Para garantir que o conteúdo fique sobre o fundo */
+
     /* Flexbox para centralizar o título vertical e horizontalmente */
-    font: fredoka one;
     display: flex;
+    font-family: var(--font-headings);
+
+    /* Define o tamanho da tela e aplica a imagem de fundo */
+    height: 80vh; /* Altura de 80% da viewport */
+    background: url('../../imagens/peb_principal.webp') no-repeat center center/cover;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #E68429; /* Cor do texto sobre a imagem */
+    color: var(--color-primary-500); /* Cor do texto sobre a imagem */
     /* Adiciona uma sombra para melhorar a legibilidade sobre a imagem */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-.header-hero-content h1 {
+.header-hero-content .header-glass-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.3); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(3px); /* Efeito de desfoque */
+}
+
+.header-hero-content .content {
+    position: relative;
+    z-index: 1; /* Para ficar acima do overlay */
+    padding: 20px;
+}
+
+.header-hero-content .content h1 {
     font-size: 4em;
 }
 /* -------------------------------------- */
@@ -55,21 +87,22 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px 5%;
-    font: fredoka one;
+    font-family: var(--font-headings);
     font-size: 25px;
-    
+
     /* PROPRIEDADE CHAVE: Torna o menu fixo no topo */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    
+
     background-color: rgba(255, 255, 255, 0.80); /* Fundo semi-transparente */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000; /* Garante que fique acima de tudo */
 }
 header img {
-    width: 180px; height: 180px; 
+    width: 180px; height: 180px;
+    object-fit: contain;
    /* Ajuste conforme necessário */
 }
 /* Estilização do menu grande */
@@ -80,27 +113,22 @@ header nav ul {
 header main {
     /* Adiciona um padding no topo para que o conteúdo não fique escondido
        atrás do menu fixo, ajuste este valor conforme a altura do seu menu. */
-    padding-top: 200px; 
+    padding-top: 200px;
 }
 header nav ul li a {
     text-decoration: none;
-    color: #5F2EE6;
+    color: var(--color-secondary);
     padding: 10px 15px;
     font-weight: bold;
     transition: color 0.3s;
-    position: center;
 }
 
 header nav ul li a:hover {
-    color: #E68429;
+    color: var(--color-primary-500);
 }
 
 /* Compensação para o Header Fixo */
-main {
-    /* Adiciona um padding no topo para que o conteúdo não fique escondido
-       atrás do menu fixo, ajuste este valor conforme a altura do seu menu. */
-    padding-top: 200px; 
-}
+
 /* -------------------------------------- */
 /* BOTÃO WHATSAPP FIXO */
 /* -------------------------------------- */
@@ -109,7 +137,7 @@ main {
     position: fixed;
     bottom: 150px; /* Distância da borda inferior */
     right: 10px; /* Distância da borda direita */
-    
+
     background-color: var(--cor-secundaria); /* Geralmente Verde */
     color: #5F2EE6;
     padding: 20px 10px;
@@ -125,7 +153,7 @@ main {
 .whatsapp-fixed-btn:hover {
     transform: scale(1.05);/* Pequena animação ao passar o mouse */
     color: #ffffff;
-    background-color: #E68429;
+    background-color: var(--color-primary-500);
 }
 .scroll-to-top-btn {
     position: fixed;
@@ -155,4 +183,50 @@ main {
 .scroll-to-top-btn:hover {
     background-color: #e69a29;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .header-menu-bar {
+        justify-content: space-between;
+    }
+
+    .header-menu-bar .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-menu-bar .hamburger {
+        display: flex;
+    }
+
+    .header-menu-bar .menu {
+        position: absolute;
+        top: 140px;
+        right: 0;
+        background: var(--color-secondary);
+        display: flex;
+        padding: 20px;
+
+        opacity: 0;
+        transform: translateX(100%);
+        transition: .3s ease-in-out;
+    }
+
+    header nav ul {
+        padding: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul li a {
+        color: #fff;
+    }
+
+    .header-menu-bar .menu.ativo {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

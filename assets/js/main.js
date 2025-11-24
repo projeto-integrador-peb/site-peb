@@ -1,5 +1,11 @@
 // Adiciona interação por clique para mobile
 $(function () {
+
+    $('.header-menu-bar .hamburger').click((e) => {
+        $(e.currentTarget).toggleClass('ativo');
+        $('.header-menu-bar .menu').toggleClass('ativo');
+    });
+
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
@@ -29,7 +35,8 @@ $(function () {
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 10000,
+        dots: true,
     });
     // Botão "ir ao topo" dinâmico — insira este arquivo em sua página (import ou <script src>).
 
@@ -120,5 +127,22 @@ $(function () {
     } else {
         document.addEventListener('DOMContentLoaded', updateVisibility);
     }
+
+    // Efeitos de hover em cards de serviços
+    // Destaque do card: apenas o card em hover fica ativo; os demais ficam esmaecidos.
+    // Ao sair do container, todos voltam ao estado ativo.
+    $('.servicos-container .servico-card')
+        .on('mouseenter' , function () {
+
+            // Por padrão remove todas as classes 'ativo' e adiciona 'opaco'
+            $('.servicos-container .servico-card').removeClass('ativo').addClass('opaco');
+
+            // Agora para o elemento com o mouse em cima adiciona a classe ativo
+            $(this).addClass('ativo').removeClass('opaco')
+        })
+        .on('mouseleave', function () {
+            // Ao retirar o mouse, deixa todos os cards ativos novamente
+            $('.servicos-container .servico-card').addClass('ativo').removeClass('opaco');
+        });
 
 });

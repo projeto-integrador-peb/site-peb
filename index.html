@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEB - Programa Educar Brincando</title>
+
+    <meta key="description" name="description" content="PEB - Programa Educar Brincando - Proporcionando experiências lúdicas e pedagógicas que valorizam o ato de aprender por meio do brincar. Atende Porto Ferreira e região." />
+    <meta key="keywords" name="keywords" content="educação, brincadeira, desenvolvimento infantil, PEB, Programa Educar Brincando" />
+
     <link rel="icon" type="image/svg" href="./assets/imagens/logo-peb.svg">
     <link rel="stylesheet" href="assets/css/vendor/slick.css">
     <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
@@ -23,13 +27,18 @@
 
 <body>
     <header class="fixed-menu" id="#top">
-        <div class="header-glass-overlay"></div>
         <div class="header-menu-bar">
             <div class="logo">
                 <img src="./assets/imagens/logo-peb.svg" alt="Logo PEB" class="logo">
             </div>
 
-            <nav id="main-nav">
+            <button class="hamburger" id="btn-main-nav" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav" class="menu">
                 <ul>
                     <li><a href="#quem-somos">Quem Somos</a></li>
                     <li><a href="#galeria">Galeria</a></li>
@@ -41,10 +50,17 @@
             </nav>
         </div>
 
-        <div class="header-hero-content">
-            <h1>Programa Educar Brincando</h1>
-        </div>
     </header>
+
+    <section>
+        <div class="header-hero-content">
+            <div class="header-glass-overlay"></div>
+            <div class="content">
+                <h1>Programa Educar Brincando</h1>
+            </div>
+        </div>
+    </section>
+
     <section id="quem-somos" class="quem-somos">
         <div class="container">
             <div class="row justify-content-center align-items-start">
@@ -79,8 +95,51 @@
         </div>
     </section>
 
-    <section id="servicos">
-        <div class="container">
+    <section id="servicos" class="servicos-secao">
+
+        <h2 class="servicos-titulo">O que podemos fazer por você?</h2>
+
+        <div class="servicos-container">
+
+            <div class="servico-card">
+                <span class="servico-icone">⭐</span>
+                <p class="servico-descricao">
+                    Festas de aniversário,
+                    Confraternizações,
+                    e mais eventos
+                </p>
+
+                <a href="https://wa.me/5511914520531?text=Pacote+1" target="_blank" class="servico-botao">
+                    Serviço 1
+                </a>
+            </div>
+
+            <div class="servico-card">
+                <span class="servico-icone">⭐</span>
+                <p class="servico-descricao">
+                    Festas de aniversário,
+                    Confraternizações,
+                    e mais eventos
+                </p>
+
+                <a href="https://wa.me/5511914520531?text=Pacote+2" target="_blank" class="servico-botao">
+                    Serviço 2
+                </a>
+            </div>
+
+            <div class="servico-card">
+                <span class="servico-icone">⭐</span>
+                <p class="servico-descricao">
+                    Festas de aniversário,
+                    Confraternizações,
+                    e mais eventos
+                </p>
+
+                <a href="https://wa.me/5511914520531?text=Pacote+3" target="_blank" class="servico-botao">
+                    Serviço 3
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -176,55 +235,6 @@
                 </div>
             </div>
 
-    </section>
-
-
-    <section class="servicos-secao">
-
-        <h2 class="servicos-titulo">O que podemos fazer por você?</h2>
-
-        <div class="servicos-container">
-
-            <div class="servico-card">
-                <span class="servico-icone">⭐</span>
-                <p class="servico-descricao">
-                    Festas de aniversário,
-                    Confraternizações,
-                    e mais eventos
-                </p>
-
-                <a href="https://wa.me/5511914520531?text=Pacote+1" target="_blank" class="servico-botao">
-                    Serviço 1
-                </a>
-            </div>
-
-            <div class="servico-card">
-                <span class="servico-icone">⭐</span>
-                <p class="servico-descricao">
-                    Festas de aniversário,
-                    Confraternizações,
-                    e mais eventos
-                </p>
-
-                <a href="https://wa.me/5511914520531?text=Pacote+2" target="_blank" class="servico-botao">
-                    Serviço 2
-                </a>
-            </div>
-
-            <div class="servico-card">
-                <span class="servico-icone">⭐</span>
-                <p class="servico-descricao">
-                    Festas de aniversário,
-                    Confraternizações,
-                    e mais eventos
-                </p>
-
-                <a href="https://wa.me/5511914520531?text=Pacote+3" target="_blank" class="servico-botao">
-                    Serviço 3
-                </a>
-            </div>
-
-        </div>
     </section>
 
     <!-- Seção de Perguntas Frequentes (FAQ) -->
@@ -356,7 +366,7 @@
     <footer>
         <!-- Logo da empresa -->
         <div class="logo-wrapper">
-            <img src="assets/imagens/PEB.png" alt="Logo PEB" class="footer-logo">
+            <img src="assets/imagens/logo-peb.svg" alt="Logo PEB" class="footer-logo">
         </div>
 
         <!-- Informações de copyright e créditos -->
