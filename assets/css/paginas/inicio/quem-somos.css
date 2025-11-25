@@ -64,4 +64,8 @@
     .quem-somos .missao-visao-valores {
         padding-left: 0;
     }
+
+    .quem-somos .perfil {
+        max-width: 250px;
+    }
 }
