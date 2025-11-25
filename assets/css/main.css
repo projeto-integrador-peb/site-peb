@@ -47,6 +47,14 @@
     padding: 3rem 0;
 }
 
+.userway_buttons_wrapper {
+    position: fixed !important;
+    top: unset !important;
+    bottom: 1rem !important;
+    right: unset !important;
+    left: 3rem !important;
+}
+
 .acessibilidade-wrapper {
     position: fixed;
     bottom: 1rem;

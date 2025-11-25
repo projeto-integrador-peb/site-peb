@@ -49,8 +49,11 @@ header {
     font-family: var(--font-headings);
 
     /* Define o tamanho da tela e aplica a imagem de fundo */
-    height: 80vh; /* Altura de 80% da viewport */
+    /* Altura de 80% da viewport */
+    /* height: 80vh; */
+    height: 720px;
     background: url('../../imagens/peb_principal.webp') no-repeat center center/cover;
+    background-position: top center;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -101,7 +104,8 @@ header {
     z-index: 1000; /* Garante que fique acima de tudo */
 }
 header img {
-    width: 180px; height: 180px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
    /* Ajuste conforme necessário */
 }
@@ -185,7 +189,12 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+    .header-hero-content {
+        min-height: 552px;
+        height: 80vh; /* Ajusta a altura para 60% da viewport */
+    }
+
     .header-menu-bar {
         justify-content: space-between;
     }
