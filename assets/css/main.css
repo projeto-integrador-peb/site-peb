@@ -10,7 +10,7 @@
 .fancy-header {
     position: relative;
     color: var(--color-primary-500);
-    /* font-size: 2rem; */
+    font-size: 2.5rem;
     margin-bottom: 26px;
 }
 
