@@ -49,6 +49,17 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 10000,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+        ],
     });
     // Botão "ir ao topo" dinâmico — insira este arquivo em sua página (import ou <script src>).
 
@@ -144,7 +155,7 @@ $(function () {
     // Destaque do card: apenas o card em hover fica ativo; os demais ficam esmaecidos.
     // Ao sair do container, todos voltam ao estado ativo.
     $('.servicos-container .servico-card')
-        .on('mouseenter' , function () {
+        .on('mouseenter', function () {
 
             // Por padrão remove todas as classes 'ativo' e adiciona 'opaco'
             $('.servicos-container .servico-card').removeClass('ativo').addClass('opaco');
