@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEB - Programa Educar Brincando</title>
+
+    <meta key="description" name="description" content="PEB - Programa Educar Brincando - Proporcionando experiências lúdicas e pedagógicas que valorizam o ato de aprender por meio do brincar. Atende Porto Ferreira e região." />
+    <meta key="keywords" name="keywords" content="educação, brincadeira, desenvolvimento infantil, PEB, Programa Educar Brincando" />
+
     <link rel="icon" type="image/svg" href="./assets/imagens/logo-peb.svg">
     <link rel="stylesheet" href="assets/css/vendor/slick.css">
     <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
@@ -14,373 +18,396 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <script src="assets/js/vendor/jquery-3.7.1.min.js" async></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/vendor/slick.min.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
-    <header class="fixed-menu"; id="#top">
-        <div class="header-glass-overlay"></div>
-            <div class="header-menu-bar">
-                <div class="logo">
-               <img src="./assets/imagens/logo-peb.svg" alt="Logo PEB" class="logo">
-                </div>
-
-                <nav id="main-nav">
-                    <ul>
-                        <li><a href="#quem-somos">Quem Somos</a></li>
-                        <li><a href="#galeria">Galeria</a></li>
-                        <li><a href="#depoimentos">Depoimentos</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </nav>
+    <header class="fixed-menu" id="#top">
+        <div class="header-menu-bar">
+            <div class="logo">
+                <img src="./assets/imagens/logo-peb.svg" alt="Logo PEB" class="logo">
             </div>
 
-            <div class="header-hero-content">
-                <h1>Programa Educar Brincando</h1>
-                </div>
+            <button class="hamburger" id="btn-main-nav" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav" class="menu">
+                <ul>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
-        <section id="quem-somos" class="quem-somos">
-            <div class="container">
-                <div class="row justify-content-center align-items-start">
-                    <div class="col-12 col-lg-4 text-center">
-                        <h1 class="titulo">Quem Somos</h1>
-                    </div>
-                    <div class="col-12 col-lg-8"></div>
-                    <div class="col-12 col-lg-4 perfil">
-                        <img class="foto" src="https://placehold.co/600x400" alt="Imagem ilustrativa sobre quem somos">
-                    </div>
-                    <div class="col-12 col-lg-8 text-center">
-                        <div class="row mb-4 missao-visao-valores">
-                            <div class="col-12 col-lg-4">
-                                <h2 class="subtitulo">Missão</h2>
-                                <p>Estimular o indivíduo no seu desenvolvimento integral, favorecendo os aspectos físico, cognitivo, afetivo, emocional e social, através de atividades lúdicas e exercícios físicos que visam sua evolução nos movimentos básicos, na coordenação motora, habilidades motoras e nas capacidades Físicas.</p>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <h2 class="subtitulo">Visão</h2>
-                                <p>Ser referência e excelência no atendimento e prestação de serviços na área do desenvolvimento motor e recreação através da PEB.</p>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <h2 class="subtitulo">Valores</h2>
-                                <p>Através de um profissional capacitado e em um espaço estimulador e diferenciado, a ética, a moral, o respeito, a cidadania e a inclusão farão parte do aprendizado dos envolvidos no Programa</p>
-                            </div>
-                        </div>
 
-                        <div class="d-flex justify-content-center">
-                            <a href="#sobre" class="btn btn-primary">Saiba Mais</a>
+    <section>
+        <div class="header-hero-content">
+            <div class="header-glass-overlay"></div>
+            <div class="content">
+                <h1>Programa Educar Brincando</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="quem-somos" class="quem-somos">
+        <div class="container">
+            <h1 class="titulo fancy-header fancy-header-center text-center">Quem Somos</h1>
+            <div class="row justify-content-center align-items-start pt-4">
+                <div class="col-12 col-lg-3 perfil">
+                    <img class="foto" src="https://placehold.co/600x600" alt="Imagem ilustrativa sobre quem somos">
+                </div>
+                <div class="col-12 col-lg-9 text-center">
+                    <div class="row mb-4 missao-visao-valores">
+                        <div class="col-12 col-lg-4">
+                            <h2 class="subtitulo">Missão</h2>
+                            <p>Estimular o indivíduo no seu desenvolvimento integral, favorecendo os aspectos físico, cognitivo, afetivo, emocional e social, através de atividades lúdicas e exercícios físicos que visam sua evolução nos movimentos básicos, na coordenação motora, habilidades motoras e nas capacidades Físicas.</p>
                         </div>
+                        <div class="col-12 col-lg-4">
+                            <h2 class="subtitulo">Visão</h2>
+                            <p>Ser referência e excelência no atendimento e prestação de serviços na área do desenvolvimento motor e recreação através da PEB.</p>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h2 class="subtitulo">Valores</h2>
+                            <p>Através de um profissional capacitado e em um espaço estimulador e diferenciado, a ética, a moral, o respeito, a cidadania e a inclusão farão parte do aprendizado dos envolvidos no Programa</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <!-- <a href="#sobre" class="btn btn-primary">Saiba Mais</a> -->
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="servicos">
-            <div class="container">
+    <section id="servicos" class="servicos-secao">
+
+        <h2 class="servicos-titulo">O que podemos fazer por você?</h2>
+
+        <div class="servicos-container">
+
+            <div class="servico-card">
+                <span class="servico-icone">⭐</span>
+                <p class="servico-descricao">
+                    Festas de aniversário,
+                    Confraternizações,
+                    e mais eventos
+                </p>
+
+                <a href="https://wa.me/5511914520531?text=Pacote+1" target="_blank" class="servico-botao">
+                    Serviço 1
+                </a>
             </div>
-        </section>
 
-        <section id="galeria">
+            <div class="servico-card">
+                <span class="servico-icone">⭐</span>
+                <p class="servico-descricao">
+                    Festas de aniversário,
+                    Confraternizações,
+                    e mais eventos
+                </p>
+
+                <a href="https://wa.me/5511914520531?text=Pacote+2" target="_blank" class="servico-botao">
+                    Serviço 2
+                </a>
+            </div>
+
+            <div class="servico-card">
+                <span class="servico-icone">⭐</span>
+                <p class="servico-descricao">
+                    Festas de aniversário,
+                    Confraternizações,
+                    e mais eventos
+                </p>
+
+                <a href="https://wa.me/5511914520531?text=Pacote+3" target="_blank" class="servico-botao">
+                    Serviço 3
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="galeria" class="padding-section">
+        <div class="container">
+            <h1 class="fancy-header fancy-header-center text-center">Galeria</h1>
             <div class="container">
-                <h2>Galeria</h2>
-                <div class="container">
-                    <div class="galeria-slide">
-                        <div><img src="assets/imagens/peb.jpg"></div>
-                        <div><img src="assets/imagens/criancada.jpg"></div>
-                        <div><img src="assets/imagens/atividade2.jpg"></div>
-                        <div><img src="assets/imagens/diversao.jpg"></div>
-                        <div><img src="assets/imagens/adulto.jpg"></div>
+                <div class="galeria-slide">
+                    <div><img src="assets/imagens/peb.jpg"></div>
+                    <div><img src="assets/imagens/criancada.jpg"></div>
+                    <div><img src="assets/imagens/atividade2.jpg"></div>
+                    <div><img src="assets/imagens/diversao.jpg"></div>
+                    <div><img src="assets/imagens/adulto.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="padding-section pt-0">
+        <div class="container">
+            <h1 class="fancy-header text-center">Depoimentos</h1>
+            <div class="caixas-depoimentos">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Aline Marangon</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
+                        <p class="card-text">“Só tenho a agradecer a empresa PEB recreação do nosso querido
+                            professor e amigo Celso. Tenho
+                            prazer em recomendar sempre toda equipe. A PEB foi contrata pelo meu irmão, pra alegrar
+                            a
+                            festa da minha sobrinha Isabela. Na ocasião, uma semana antes da data, ela sofreu uma
+                            queda
+                            e quebrou a perna, Isa estava completando seus 5 aninhos. Foi um sufoco e apreensão,
+                            pois
+                            não sabíamos como seria. E pra nossa alegria a PEB se manteve presente na festa, dizendo
+                            que
+                            faria uma festa inesquecível sem nenhuma mudança, pelo contrário, adaptando as
+                            brincadeira,
+                            a tia Natália o tempo todo empurrando a cadeira de rodas, incluindo a aniversariante nas
+                            brincadeiras, fazendo daquele dia o melhor pra todos, mas em especial a aniversariante
+                            que
+                            estava com com a perna imobilizada, mas que brincou e se divertiu como se não tivesse
+                            nada
+                            que a impedisse....pois tinha o tio Celso e a tia (&) o tempo todo dando suporte,
+                            ALEGRANDO,
+                            deixando a festa simplesmente inesquecível.”</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cassia Fernanda Parra Zanetti</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
+                        <p class="card-text">“O projeto recreação é um projeto que envolve crianças de todas as
+                            idades.
+                            Eles ensinam as crianças a brincar em equipe, ensina a perder e a ganhar, ensinam a
+                            empatia, ensinam a criança a ter autoconfiança, tudo isso com brincadeiras que eles
+                            amam.
+                            Minha filha foi um exemplo. Ela tem 5 aninhos, não entendia oque era perder nas
+                            brincadeiras, ela tinha dificuldade. Em uma certa brincadeira em equipe ela simplesmente
+                            sentou e chorou, eu nem precisei intervir, a esposa do Celso acolheu minha filha da
+                            melhor maneira possível e minha filha se sentiu segura e logo voltou a brincar , ela
+                            naquele dia entendeu que perder faz parte da brincadeira.
+                            O projeto recreação faz a diferença. Minha filha é um exemplo, ela não quer para o
+                            aniversário dela brinquedos infláveis e sim os monitores para fazer as brincadeiras
+                            acontecerem.”</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bernadete Lourdes momesso munhoz, Espaço de eventos e Buffet D 'Maria
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
+                        <p class="card-text">“Família PEB do nosso querido CELSO, indico de olhos fechados para os
+                            meus clientes e amigos,
+                            pela confiança responsabilidade, tranquilidade, profissionalismo ,amor e carinho, que
+                            transmitem para o nosso espaço e para os contratantes, capacitados para todo tipo de
+                            eventos.”</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cristiane Leal Massa</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
+                        <p class="card-text">“O trabalho da PEB, conduzido pelo recreador Celso, é incrível! Ele
+                            transforma o brincar em
+                            momentos de alegria, aprendizado e segurança. Com o apoio de uma equipe de monitores
+                            dedicados, promove uma grande variedade de brincadeiras e atividades, mostrando às
+                            crianças
+                            como é gostoso brincar. Todas as atividades são planejadas com carinho, criatividade e
+                            muita
+                            energia, tornando os encontros especiais e inesquecíveis!”</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="depoimentos">
-            <div class="container">
-                <h2>Depoimentos</h2>
-                <div class="caixas-depoimentos">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Aline Marangon</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
-                            <p class="card-text">“Só tenho a agradecer a empresa PEB recreação do nosso querido
-                                professor e amigo Celso. Tenho
-                                prazer em recomendar sempre toda equipe. A PEB foi contrata pelo meu irmão, pra alegrar
-                                a
-                                festa da minha sobrinha Isabela. Na ocasião, uma semana antes da data, ela sofreu uma
-                                queda
-                                e quebrou a perna, Isa estava completando seus 5 aninhos. Foi um sufoco e apreensão,
-                                pois
-                                não sabíamos como seria. E pra nossa alegria a PEB se manteve presente na festa, dizendo
-                                que
-                                faria uma festa inesquecível sem nenhuma mudança, pelo contrário, adaptando as
-                                brincadeira,
-                                a tia Natália o tempo todo empurrando a cadeira de rodas, incluindo a aniversariante nas
-                                brincadeiras, fazendo daquele dia o melhor pra todos, mas em especial a aniversariante
-                                que
-                                estava com com a perna imobilizada, mas que brincou e se divertiu como se não tivesse
-                                nada
-                                que a impedisse....pois tinha o tio Celso e a tia (&) o tempo todo dando suporte,
-                                ALEGRANDO,
-                                deixando a festa simplesmente inesquecível.”</p>
-                        </div>
+    </section>
+
+    <!-- Seção de Perguntas Frequentes (FAQ) -->
+    <section id="faq">
+        <div class="container">
+            <h1 class="fancy-header text-center">FAQ</h1>
+            <div class="faq-container">
+                <!-- Item 1 do FAQ - Público-alvo -->
+                <div class="faq-item purple">
+                    <div class="content-box">
+                        <p class="question">Público-alvo</p>
+                        <p class="answer">Sem limite de idade (atende desde crianças a idosos), com exceção de crianças
+                            especiais (cognitivas).</p>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Cassia Fernanda Parra Zanetti</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
-                            <p class="card-text">“O projeto recreação é um projeto que envolve crianças de todas as
-                                idades.
-                                Eles ensinam as crianças a brincar em equipe, ensina a perder e a ganhar, ensinam a
-                                empatia, ensinam a criança a ter autoconfiança, tudo isso com brincadeiras que eles
-                                amam.
-                                Minha filha foi um exemplo. Ela tem 5 aninhos, não entendia oque era perder nas
-                                brincadeiras, ela tinha dificuldade. Em uma certa brincadeira em equipe ela simplesmente
-                                sentou e chorou, eu nem precisei intervir, a esposa do Celso acolheu minha filha da
-                                melhor maneira possível e minha filha se sentiu segura e logo voltou a brincar , ela
-                                naquele dia entendeu que perder faz parte da brincadeira.
-                                O projeto recreação faz a diferença. Minha filha é um exemplo, ela não quer para o
-                                aniversário dela brinquedos infláveis e sim os monitores para fazer as brincadeiras
-                                acontecerem.”</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Bernadete Lourdes momesso munhoz, Espaço de eventos e Buffet D 'Maria
-                            </h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
-                            <p class="card-text">“Família PEB do nosso querido CELSO, indico de olhos fechados para os
-                                meus clientes e amigos,
-                                pela confiança responsabilidade, tranquilidade, profissionalismo ,amor e carinho, que
-                                transmitem para o nosso espaço e para os contratantes, capacitados para todo tipo de
-                                eventos.”</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Cristiane Leal Massa</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Depoimento</h6>
-                            <p class="card-text">“O trabalho da PEB, conduzido pelo recreador Celso, é incrível! Ele
-                                transforma o brincar em
-                                momentos de alegria, aprendizado e segurança. Com o apoio de uma equipe de monitores
-                                dedicados, promove uma grande variedade de brincadeiras e atividades, mostrando às
-                                crianças
-                                como é gostoso brincar. Todas as atividades são planejadas com carinho, criatividade e
-                                muita
-                                energia, tornando os encontros especiais e inesquecíveis!”</p>
-                        </div>
+                    <div class="image-placeholder">
+                        <img src="./assets/imagens/foto1.jpg" alt="Tapete de amarelinha">
                     </div>
                 </div>
 
-        </section>
+                <!-- Item 2 do FAQ - Cidades Atendidas -->
+                <div class="faq-item purple">
+                    <div class="content-box">
+                        <p class="question">Cidades Atendidas</p>
+                        <p class="answer">Atendimento prioritário e sem taxa de deslocamento em Porto Ferreira! Para cidades
+                            vizinhas da região (como Santa Rita do Passa Quatro, Descalvado, Pirassununga e outras),
+                            aplicamos uma pequena taxa de deslocamento.</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="./assets/imagens/foto2.jpg" alt="Bolhas de sãbão no ar">
+                    </div>
+                </div>
 
+                <!-- Item 3 do FAQ - Definição de Recreação -->
+                <div class="faq-item orange">
+                    <div class="content-box">
+                        <p class="question">O que é Recreação?</p>
+                        <p class="answer">Lazer sem sacrifício. (Promove diversão e bem-estar de forma leve e acessível).
+                        </p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="assets/imagens/foto3.jpg" alt="bambolês">
+                    </div>
+                </div>
 
-<section class="servicos-secao">
+                <!-- Item 4 do FAQ - Brincadeiras Oferecidas -->
+                <div class="faq-item orange">
+                    <div class="content-box">
+                        <p class="question">Principais Brincadeiras</p>
+                        <p class="answer">Brincadeira 1, Brincadeira 2, Brincadeira 3 etc</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="assets/imagens/foto4.jpg" alt="Mãos apoiadas na bola de futebol no chão">
+                    </div>
+                </div>
 
-    <h2 class="servicos-titulo">O que podemos fazer por você?</h2>
+                <!-- Item 5 do FAQ - Duração dos Serviços -->
+                <div class="faq-item purple">
+                    <div class="content-box">
+                        <p class="question">Duração do Serviço</p>
+                        <p class="answer">3 horas de pura diversão! Este é o tempo máximo ideal para que todos aproveitem ao
+                            máximo e encerrem a atividade antes que o cansaço tome conta.</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="assets/imagens/foto5.jpg" alt="Trilha de cone">
+                    </div>
+                </div>
 
-    <div class="servicos-container">
+                <!-- Item 6 do FAQ - Brinquedos Disponíveis -->
+                <div class="faq-item purple">
+                    <div class="content-box">
+                        <p class="question">Brinquedos Disponibilizados</p>
+                        <p class="answer">Bambolê, tapete de amarelinha, bola e demais brinquedos de educação física. Não
+                            trabalhamos com brinquedos infláveis.</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="assets/imagens/foto6.jpg" alt="Meninas brincando">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <div class="servico-card">
-            <span class="servico-icone">⭐</span>
-            <p class="servico-descricao">
-                Festas de aniversário,
-                Confraternizações,
-                e mais eventos
-            </p>
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <div class="container">
+            <div class="contact-header">
+                <h2>Contato</h2>
+            </div>
 
-            <a href="https://wa.me/5511914520531?text=Pacote+1" target="_blank" class="servico-botao">
-                Serviço 1
-            </a>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <!-- Informação de localização -->
+                    <div class="contact-item">
+                        <i class="icon">📍</i>
+                        <p>Atendemos Porto Ferreira e região</p>
+                    </div>
+
+                    <!-- Informação de telefone -->
+                    <div class="contact-item">
+                        <i class="icon">📞</i>
+                        <p><strong>Telefone:</strong> (11) 91452-0531</p>
+                    </div>
+
+                    <!-- Informação de email -->
+                    <div class="contact-item">
+                        <i class="icon">✉️</i>
+                        <p><strong>Email:</strong> programaeducarbrincando@gmail.com</p>
+                    </div>
+
+                    <!-- Link para redes sociais -->
+                    <div class="contact-item">
+                        <i class="icon instagram-icon">📷</i>
+                        <p><strong>Siga-nos:</strong> <a href="https://instagram.com/peb.educar" target="_blank">@peb.educar</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <a href="https://wa.me/5511914520531?text=Mensagem+aqui" target="_blank" class="whatsapp-fixed-btn">
+        Venha Se Divertir!
+    </a>
+    <!-- Botão de rolagem para o topo -->
+    <a href="#top" class="scroll-to-top-btn">
+        <img src="./assets/imagens/ate_topo.png" alt="Voltar ao Topo" />
+    </a>
+    <!-- Rodapé do site -->
+    <footer>
+        <!-- Logo da empresa -->
+        <div class="logo-wrapper">
+            <img src="assets/imagens/logo-peb.svg" alt="Logo PEB" class="footer-logo">
         </div>
 
-        <div class="servico-card">
-            <span class="servico-icone">⭐</span>
-            <p class="servico-descricao">
-                Festas de aniversário,
-                Confraternizações,
-                e mais eventos
-            </p>
-
-            <a href="https://wa.me/5511914520531?text=Pacote+2" target="_blank" class="servico-botao">
-                Serviço 2
-            </a>
+        <!-- Informações de copyright e créditos -->
+        <div class="footer-center">
+            <p>Copyright © 2025 PEB. Todos os direitos reservados.</p>
+            <p>Powered by alunos Fatec</p>
         </div>
 
-        <div class="servico-card">
-            <span class="servico-icone">⭐</span>
-            <p class="servico-descricao">
-                Festas de aniversário,
-                Confraternizações,
-                e mais eventos
-            </p>
+        <!-- Mapa do site para navegação rápida -->
+        <div class="footer-right">
+            <h3>Mapa do site</h3>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#quem-somos">Quem somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#faq">Perguntas frequentes</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#politica">Política de privacidade</a></li>
+            </ul>
+        </div>
+    </footer>
 
-            <a href="https://wa.me/5511914520531?text=Pacote+3" target="_blank" class="servico-botao">
-                Serviço 3
-            </a>
+    <div class="acessibilidade-wrapper">
+        <button type="button" id="btn-acessibilidade" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-person-standing-icon lucide-person-standing"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>
+        </button>
+
+        <div class="acessibilidade-content">
+            <!-- <div class="d-flex">
+                <p>Alto contraste.</p>
+                <button type="button" id="modo-daltonismo" class="btn btn-primary">Contraste</button>
+            </div> -->
+            <div class="d-flex align-items-center justify-content-center mb-2" style="gap: 8px;">
+                <p class="mb-0">Tamanho da fonte do texto:</p>
+                <button type="button" id="aumentar-fonte" class="btn btn-primary">+</button>
+                <button type="button" id="diminuir-fonte" class="btn btn-primary">-</button>
+            </div>
+
+            <button type="button" id="fechar-acessibilidade" class="btn btn-secondary">X</button>
+
         </div>
 
     </div>
-</section>
-
-        <!-- Seção de Perguntas Frequentes (FAQ) -->
-        <section id="faq">
-            <div class="container">
-                <h1>FAQ</h1>
-                <div class="faq-container">
-                    <!-- Item 1 do FAQ - Público-alvo -->
-                    <div class="faq-item purple">
-                        <div class="content-box">
-                            <p class="question">Público-alvo</p>
-                            <p class="answer">Sem limite de idade (atende desde crianças a idosos), com exceção de crianças
-                                especiais (cognitivas).</p>
-                        </div>
-                        <div class="image-placeholder">
-                            <img src="./assets/imagens/foto1.jpg" alt="Tapete de amarelinha">
-                        </div>
-                    </div>
-
-                    <!-- Item 2 do FAQ - Cidades Atendidas -->
-                    <div class="faq-item purple">
-                        <div class="content-box">
-                            <p class="question">Cidades Atendidas</p>
-                            <p class="answer">Atendimento prioritário e sem taxa de deslocamento em Porto Ferreira! Para cidades
-                                vizinhas da região (como Santa Rita do Passa Quatro, Descalvado, Pirassununga e outras),
-                                aplicamos uma pequena taxa de deslocamento.</p>
-                        </div>
-                        <div class="image-placeholder">
-                            <img src="./assets/imagens/foto2.jpg" alt="Bolhas de sãbão no ar">
-                        </div>
-                    </div>
-
-                    <!-- Item 3 do FAQ - Definição de Recreação -->
-                    <div class="faq-item orange">
-                        <div class="content-box">
-                            <p class="question">O que é Recreação?</p>
-                            <p class="answer">Lazer sem sacrifício. (Promove diversão e bem-estar de forma leve e acessível).
-                            </p>
-                        </div>
-                        <div class="image-placeholder">
-                            <img src="assets/imagens/foto3.jpg" alt="bambolês">
-                        </div>
-                    </div>
-
-                    <!-- Item 4 do FAQ - Brincadeiras Oferecidas -->
-                    <div class="faq-item orange">
-                        <div class="content-box">
-                            <p class="question">Principais Brincadeiras</p>
-                            <p class="answer">Brincadeira 1, Brincadeira 2, Brincadeira 3 etc</p>
-                        </div>
-                        <div class="image-placeholder">
-                            <img src="assets/imagens/foto4.jpg" alt="Mãos apoiadas na bola de futebol no chão">
-                        </div>
-                    </div>
-
-                    <!-- Item 5 do FAQ - Duração dos Serviços -->
-                    <div class="faq-item purple">
-                        <div class="content-box">
-                            <p class="question">Duração do Serviço</p>
-                            <p class="answer">3 horas de pura diversão! Este é o tempo máximo ideal para que todos aproveitem ao
-                                máximo e encerrem a atividade antes que o cansaço tome conta.</p>
-                        </div>
-                        <div class="image-placeholder">
-                            <img src="assets/imagens/foto5.jpg" alt="Trilha de cone">
-                        </div>
-                    </div>
-
-                    <!-- Item 6 do FAQ - Brinquedos Disponíveis -->
-                    <div class="faq-item purple">
-                        <div class="content-box">
-                            <p class="question">Brinquedos Disponibilizados</p>
-                            <p class="answer">Bambolê, tapete de amarelinha, bola e demais brinquedos de educação física. Não
-                                trabalhamos com brinquedos infláveis.</p>
-                        </div>
-                        <div class="image-placeholder">
-                            <img src="assets/imagens/foto6.jpg" alt="Meninas brincando">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Contato -->
-        <section id="contato">
-            <div class="container">
-                <div class="contact-header">
-                    <h2>Contato</h2>
-                </div>
-
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <!-- Informação de localização -->
-                        <div class="contact-item">
-                            <i class="icon">📍</i>
-                            <p>Atendemos Porto Ferreira e região</p>
-                        </div>
-
-                        <!-- Informação de telefone -->
-                        <div class="contact-item">
-                            <i class="icon">📞</i>
-                            <p><strong>Telefone:</strong> (11) 91452-0531</p>
-                        </div>
-
-                        <!-- Informação de email -->
-                        <div class="contact-item">
-                            <i class="icon">✉️</i>
-                            <p><strong>Email:</strong> programaeducarbrincando@gmail.com</p>
-                        </div>
-
-                        <!-- Link para redes sociais -->
-                        <div class="contact-item">
-                            <i class="icon instagram-icon">📷</i>
-                            <p><strong>Siga-nos:</strong> <a href="https://instagram.com/peb.educar"
-                                    target="_blank">@peb.educar</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        </main>
-        <a href="https://wa.me/5511914520531?text=Mensagem+aqui" target="_blank" class="whatsapp-fixed-btn">
-            Venha Se Divertir!
-        </a>
-        <!-- Botão de rolagem para o topo -->
-        <a href="#top" class="scroll-to-top-btn">
-            <img src="./assets/imagens/ate_topo.png" alt="Voltar ao Topo" />
-        </a>
-<!-- Rodapé do site -->
-<footer>
-    <!-- Logo da empresa -->
-    <div class="logo-wrapper">
-        <img src="assets/imagens/PEB.png" alt="Logo PEB" class="footer-logo">
-    </div>
-
-    <!-- Informações de copyright e créditos -->
-    <div class="footer-center">
-        <p>Copyright © 2025 PEB. Todos os direitos reservados.</p>
-        <p>Powered by alunos Fatec</p>
-    </div>
-
-    <!-- Mapa do site para navegação rápida -->
-    <div class="footer-right">
-        <h3>Mapa do site</h3>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#quem-somos">Quem somos</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#faq">Perguntas frequentes</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#politica">Política de privacidade</a></li>
-        </ul>
-    </div>
-</footer>
 </body>
 
 </html>

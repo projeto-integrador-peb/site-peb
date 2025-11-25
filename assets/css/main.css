@@ -1,3 +1,104 @@
 @import "./base.css";
 @import "./componentes/header.css";
 @import "./componentes/footer.css";
+
+
+.slick-prev:before, .slick-next:before {
+    color: var(--color-primary-500);
+}
+
+.fancy-header {
+    position: relative;
+    color: var(--color-primary-500);
+    /* font-size: 2rem; */
+    margin-bottom: 26px;
+}
+
+.fancy-header::before,
+.fancy-header::after {
+    content: "";
+    display: block;
+    border-radius: 8px;
+    height: 4px;
+    background-color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+}
+
+.fancy-header::before {
+    width: 40px;
+    bottom: -4px;
+}
+
+.fancy-header::after {
+    width: 28px;
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+}
+
+.fancy-header.text-center::before,
+.fancy-header.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.padding-section {
+    padding: 3rem 0;
+}
+
+.acessibilidade-wrapper {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1100;
+}
+
+.acessibilidade-wrapper #btn-acessibilidade {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.acessibilidade-wrapper #btn-acessibilidade.ocultar {
+    display: none;
+}
+
+.acessibilidade-wrapper .acessibilidade-content {
+    display: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.acessibilidade-wrapper .acessibilidade-content.ativo {
+    display: flex;
+}
+
+.acessibilidade-content #fechar-acessibilidade {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 8px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--color-secondary);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Modo daltonismo: alto contraste */
+.modo-daltonismo {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.modo-daltonismo a {
+    color: #00ffff !important;
+}
