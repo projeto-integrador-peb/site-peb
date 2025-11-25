@@ -145,4 +145,47 @@ $(function () {
             $('.servicos-container .servico-card').addClass('ativo').removeClass('opaco');
         });
 
+    const widgetAcessibilidade = () => {
+
+        $('#btn-acessibilidade, #fechar-acessibilidade').on('click', function () {
+            $('.acessibilidade-content').toggleClass('ativo');
+            $('#btn-acessibilidade').toggleClass('ocultar');
+        });
+
+        let fonteAtual = parseInt(localStorage.getItem("fonte")) || 16;
+        let daltonismoAtivo = localStorage.getItem("daltonismo") === "true";
+
+        // Aplica configs iniciais
+        $("body").css("font-size", fonteAtual + "px");
+
+        if (daltonismoAtivo) {
+            $("body").addClass("modo-daltonismo");
+        }
+
+        // Aumentar fonte
+        $("#aumentar-fonte").on("click", function () {
+            fonteAtual += 2;
+            $("body").css("font-size", fonteAtual + "px");
+            localStorage.setItem("fonte", fonteAtual);
+        });
+
+        // Diminuir fonte
+        $("#diminuir-fonte").on("click", function () {
+            if (fonteAtual > 10) {
+                fonteAtual -= 2;
+                $("body").css("font-size", fonteAtual + "px");
+                localStorage.setItem("fonte", fonteAtual);
+            }
+        });
+
+        // Modo daltonismo / alto contraste
+        $("#modo-daltonismo").on("click", function () {
+            $("body").toggleClass("modo-daltonismo");
+            const ativo = $("body").hasClass("modo-daltonismo");
+            localStorage.setItem("daltonismo", ativo);
+        });
+    }
+
+    widgetAcessibilidade();
+
 });
