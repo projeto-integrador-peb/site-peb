@@ -1,6 +1,18 @@
 // Adiciona interação por clique para mobile
 $(function () {
 
+    // Evento de clique para rolar a página até a seção do menu clicado
+
+    $('#main-nav a').on('click', function (e) {
+        e.preventDefault();
+
+        const alvo = $(this).attr('href');
+        const headerAltura = $('header .header-menu-bar').outerHeight(); // altura real do header
+        const offsetTop = $(alvo).offset().top; // posição natural da seção
+
+        $('html, body').scrollTop(offsetTop - headerAltura, 600);
+    });
+
     $('.header-menu-bar .hamburger').click((e) => {
         $(e.currentTarget).toggleClass('ativo');
         $('.header-menu-bar .menu').toggleClass('ativo');
