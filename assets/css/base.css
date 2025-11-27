@@ -160,6 +160,19 @@ p {
   margin-left: auto;
 }
 
+/* Utilitários de tamanhos */
+.w-100 {
+  width: 100%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 25%;
+}
+
 /* Utilitários de grid */
 .row {
   display: flex;

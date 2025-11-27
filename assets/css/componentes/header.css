@@ -136,12 +136,14 @@ header nav ul li a:hover {
 /* -------------------------------------- */
 /* BOTÃO WHATSAPP FIXO */
 /* -------------------------------------- */
-.whatsapp-fixed-btn {
+.wrapper-whatsapp-btn {
     /* PROPRIEDADE CHAVE: Torna o botão fixo */
     position: fixed;
-    bottom: 150px; /* Distância da borda inferior */
+    bottom: 170px; /* Distância da borda inferior */
     right: 10px; /* Distância da borda direita */
-
+    z-index: 999; /* Fica abaixo do menu fixo, mas acima do conteúdo */
+}
+.whatsapp-fixed-btn {
     background-color: var(--cor-secundaria); /* Geralmente Verde */
     color: #5F2EE6;
     padding: 20px 10px;
@@ -149,7 +151,6 @@ header nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Fica abaixo do menu fixo, mas acima do conteúdo */
     transition: transform 0.3s;
     background-color: #29E63A;
 }
@@ -159,13 +160,15 @@ header nav ul li a:hover {
     color: #ffffff;
     background-color: var(--color-primary-500);
 }
-.scroll-to-top-btn {
+
+.wrapper-scroll-top {
     position: fixed;
-    width: 130px;
     bottom: 80px;
     right: 20px;
     z-index: 1001;
+}
 
+.scroll-to-top-btn {
     background-color: #5F2EE6;
     color: #a31a1a;
     border-radius: 50%;

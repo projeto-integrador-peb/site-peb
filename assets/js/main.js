@@ -169,6 +169,55 @@ $(function () {
         });
 
     const widgetAcessibilidade = () => {
+        // Opções de filtros de daltonismo
+        const filtrosDaltonismo = {
+            normal: {
+                title: 'Visão Normal',
+                description: 'Percepção completa de todas as cores do espectro visível.'
+            },
+            protanopia: {
+                title: 'Protanopia',
+                description: 'Deficiência na percepção do vermelho. Afeta cerca de 1% dos homens. Vermelho e verde podem parecer similares.'
+            },
+            deuteranopia: {
+                title: 'Deuteranopia',
+                description: 'Deficiência na percepção do verde. É o tipo mais comum de daltonismo, afetando cerca de 5% dos homens.'
+            },
+            tritanopia: {
+                title: 'Tritanopia',
+                description: 'Deficiência na percepção do azul e amarelo. É rara, afetando menos de 1% da população.'
+            },
+            achromatopsia: {
+                title: 'Acromatopsia',
+                description: 'Ausência total de percepção de cores (visão em preto e branco). É extremamente rara.'
+            }
+        };
+
+        // Popula o select com as opções
+        const selectFiltro = $('#select-filtro-daltonismo');
+
+        $.each(filtrosDaltonismo, function (key, filtro) {
+            const option = $('<option></option>')
+                .attr('value', key)
+                .text(filtro.title);
+            selectFiltro.append(option);
+        });
+
+        // Evento de mudança no select
+        selectFiltro.on('change', function () {
+            const valorSelecionado = $(this).val();
+
+            const seletoresAplicarFiltro = 'main, .inject-daltonismo';
+
+            // Remove todas as classes de filtro existentes do body
+            $(seletoresAplicarFiltro).removeClass(function (index, className) {
+                return (className.match(/(^|\s)filtro-\S+/g) || []).join(' ');
+            });
+
+            if (valorSelecionado) {
+                $(seletoresAplicarFiltro).addClass('filtro-' + valorSelecionado);
+            }
+        });
 
         $('#btn-acessibilidade, #fechar-acessibilidade').on('click', function () {
             $('.acessibilidade-content').toggleClass('ativo');

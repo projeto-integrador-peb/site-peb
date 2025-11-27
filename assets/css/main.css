@@ -3,8 +3,10 @@
 @import "./componentes/footer.css";
 
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
     color: var(--color-primary-500);
+    font-size: 2rem;
 }
 
 .fancy-header {
@@ -84,6 +86,7 @@
 
 .acessibilidade-wrapper .acessibilidade-content.ativo {
     display: flex;
+    flex-flow: column;
 }
 
 .acessibilidade-content #fechar-acessibilidade {
@@ -99,6 +102,24 @@
     border: none;
     font-size: 1rem;
     cursor: pointer;
+}
+
+/* Filtros SVG para daltonismo */
+/* Os filtros SVG devem ser definidos no HTML */
+.filtro-protanopia {
+    filter: url(#protanopia);
+}
+
+.filtro-deuteranopia {
+    filter: url(#deuteranopia);
+}
+
+.filtro-tritanopia {
+    filter: url(#tritanopia);
+}
+
+.filtro-achromatopsia {
+    filter: grayscale(100%);
 }
 
 /* Modo daltonismo: alto contraste */
