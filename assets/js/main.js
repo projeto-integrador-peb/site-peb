@@ -258,6 +258,22 @@ $(function () {
         });
     }
 
+    const lerMaisDepoimentos = () => {
+        $('.btn-ler-mais').on('click', function () {
+            const $texto = $(this).siblings('.card-text');
+            const $botao = $(this);
+
+            if ($texto.hasClass('collapsed')) {
+                $texto.removeClass('collapsed').css('max-height', $texto[0].scrollHeight + 'px');
+                // $botao.text('Ler menos').fadeOut(200).fadeIn(200);
+            } else {
+                $texto.addClass('collapsed').css('max-height', '100px');
+                // $botao.text('Ler mais').fadeOut(200).fadeIn(200);
+            }
+        });
+    };
+
     widgetAcessibilidade();
+    lerMaisDepoimentos();
 
 });

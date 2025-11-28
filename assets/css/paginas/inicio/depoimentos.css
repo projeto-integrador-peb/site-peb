@@ -1,11 +1,41 @@
 .caixas-depoimentos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .caixas-depoimentos .card{
-  margin-bottom: 20px;
-  width: 47%;
+}
+
+.caixas-depoimentos .card-body {
+    position: relative;
+}
+
+.caixas-depoimentos .card-text {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.caixas-depoimentos .card-text.collapsed {
+  max-height: 100px;
+  height: 100px;
+}
+
+.caixas-depoimentos .card-text.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, white);
+    pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .caixas-depoimentos {
+    display: flex;
+    flex-flow: column;
+  }
 }
