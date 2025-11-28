@@ -65,11 +65,13 @@
 
 
 .servico-descricao {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     font-size: 16px;
+    font-weight: 600;
     color: #555;
     line-height: 1.4;
     margin: 0;
+    min-height: 50px;
 }
 
 .servico-botao {
