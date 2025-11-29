@@ -23,6 +23,10 @@ footer {
     align-items: center; /* Centraliza verticalmente */
 }
 
+.logo-wrapper img {
+    max-width: 200px;
+}
+
 .footer-logo {
     max-height: 180px; /* Altura máxima controlada */
     width: auto; /* Mantém proporção original */
