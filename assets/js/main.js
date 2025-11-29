@@ -265,10 +265,10 @@ $(function () {
 
             if ($texto.hasClass('collapsed')) {
                 $texto.removeClass('collapsed').css('max-height', $texto[0].scrollHeight + 'px');
-                // $botao.text('Ler menos').fadeOut(200).fadeIn(200);
+                $botao.text('Ler menos');
             } else {
                 $texto.addClass('collapsed').css('max-height', '100px');
-                // $botao.text('Ler mais').fadeOut(200).fadeIn(200);
+                $botao.text('Ler mais');
             }
         });
     };
