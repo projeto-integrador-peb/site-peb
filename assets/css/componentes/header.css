@@ -139,20 +139,23 @@ header nav ul li a:hover {
 .wrapper-whatsapp-btn {
     /* PROPRIEDADE CHAVE: Torna o botão fixo */
     position: fixed;
-    bottom: 170px; /* Distância da borda inferior */
-    right: 10px; /* Distância da borda direita */
+    bottom: 90px; /* Distância da borda inferior */
+    right: 1rem; /* Distância da borda direita */
     z-index: 999; /* Fica abaixo do menu fixo, mas acima do conteúdo */
 }
 .whatsapp-fixed-btn {
-    background-color: var(--cor-secundaria); /* Geralmente Verde */
-    color: #5F2EE6;
-    padding: 20px 10px;
+    background-color: var(--color-accent); /* Geralmente Verde */
+    color: var(--color-secondary);
+    padding: 10px 16px;
     border-radius: 50px; /* Formato redondo/oval */
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
-    background-color: #29E63A;
+    /* background-color: #29E63A; */
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .whatsapp-fixed-btn:hover {
@@ -161,10 +164,15 @@ header nav ul li a:hover {
     background-color: var(--color-primary-500);
 }
 
+.whatsapp-fixed-btn svg {
+    width: 30px;
+    display: inline-block;
+}
+
 .wrapper-scroll-top {
     position: fixed;
-    bottom: 80px;
-    right: 20px;
+    bottom: 1rem;
+    right: 1rem;
     z-index: 1001;
 }
 
@@ -240,5 +248,9 @@ header nav ul li a:hover {
     .header-menu-bar .menu.ativo {
         transform: translateX(0);
         opacity: 1;
+    }
+
+    .whatsapp-fixed-btn .frase {
+        display: none;
     }
 }
