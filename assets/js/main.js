@@ -3,7 +3,7 @@ $(function () {
 
     // Evento de clique para rolar a página até a seção do menu clicado
 
-    $('#main-nav a').on('click', function (e) {
+    $('#main-nav a, .footer-right a').on('click', function (e) {
         e.preventDefault();
 
         const alvo = $(this).attr('href');
