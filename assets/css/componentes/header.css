@@ -208,7 +208,7 @@ header nav ul li a:hover {
     }
 
     .header-menu-bar .logo {
-        width: 120px;
+        width: 110px;
         margin: 6px 0px;
     }
 
@@ -218,7 +218,7 @@ header nav ul li a:hover {
 
     .header-menu-bar .menu {
         position: absolute;
-        top: 122px;
+        top: 115px;
         right: 0;
         background: var(--color-secondary);
         display: flex;
