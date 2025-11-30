@@ -7,7 +7,6 @@
 
 .servicos-titulo {
     color: var(--color-secondary);
-    font-family: "Fredoka One", sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -18,10 +17,8 @@
     height: 47px; */
     flex-shrink: 0;
 
-
     text-align: center;
     margin: 0 auto 40px auto;
-
 
     display: flex;
     align-items: center;
